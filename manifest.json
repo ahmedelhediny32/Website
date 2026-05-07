@@ -1,0 +1,67 @@
+{
+  "name": "Ahmed Elhediny - Creative Graphic Designer",
+  "short_name": "Ahmed Portfolio",
+  "description": "Portfolio of Ahmed Elhediny, Creative Graphic Designer specializing in Photoshop, Illustrator, and InDesign",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#4b134f",
+  "theme_color": "#4b134f",
+  "orientation": "portrait-primary",
+  "categories": ["design", "portfolio", "graphics"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "logo png 2 -dark.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo png 3 - lightt.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "Browse Ahmed's design projects",
+      "url": "/#projects",
+      "icons": [
+        {
+          "src": "logo png 2 -dark.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with Ahmed",
+      "url": "/#contact",
+      "icons": [
+        {
+          "src": "logo png 2 -dark.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}

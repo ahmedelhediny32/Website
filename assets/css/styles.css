@@ -1,0 +1,646 @@
+		body {
+			font-family: 'Cairo', sans-serif;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			text-rendering: optimizeLegibility;
+		}
+
+		.font-handwritten {
+			font-family: 'Caveat', cursive;
+		}
+
+		.text-name {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		.light .text-name,
+		.light .section-heading {
+			color: #74254e;
+		}
+
+		.dark .text-name,
+		.dark .section-heading {
+			color: #fef9db;
+		}
+
+		.light {
+			background: linear-gradient(135deg, #fffcdc, #d9a7c7);
+			color: #1f2937;
+		}
+
+		.dark {
+			background: url('../img/icons/eXpresso.jpg') center/cover no-repeat, linear-gradient(135deg, #2d1b69, #b91c1c);
+			color: #ffffff;
+		}
+
+		.section {
+			min-height: 100vh;
+			padding: 100px 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		/* Mobile optimizations */
+		@media (max-width: 768px) {
+			.section {
+				padding: 60px 1rem;
+				min-height: auto;
+			}
+
+			/* Mobile typography */
+			h1 {
+				font-size: 3rem !important;
+			}
+
+			h2 {
+				font-size: 2.5rem !important;
+			}
+
+			.text-7xl {
+				font-size: 3.5rem !important;
+			}
+
+			.text-5xl {
+				font-size: 2.5rem !important;
+			}
+
+			.text-3xl {
+				font-size: 1.25rem !important;
+			}
+
+			/* Mobile contact form */
+			.contact-input {
+				padding: 0.75rem !important;
+				font-size: 0.875rem !important;
+			}
+
+			#contact-form {
+				padding: 1rem !important;
+			}
+
+			/* Social media icons mobile */
+			.flex.justify-center.gap-6 img {
+				width: 2rem !important;
+				height: 2rem !important;
+			}
+
+			/* Mobile testimonials */
+			.testimonial-card {
+				padding: 1.5rem !important;
+			}
+
+			.testimonial-quote-icon {
+				font-size: 2rem !important;
+			}
+
+			.testimonial-quote-icon svg {
+				width: 24px !important;
+				height: 24px !important;
+			}
+
+			.testimonial-name {
+				font-size: 1.25rem !important;
+			}
+
+			.testimonial-text {
+				font-size: 0.875rem !important;
+			}
+
+			/* Mobile navigation */
+
+			/* Mobile buttons */
+			button {
+				min-height: 44px;
+				min-width: 44px;
+			}
+
+			/* Mobile spacing */
+			.container {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+		}
+
+		/* Tablet optimizations */
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.section {
+				padding: 80px 1rem;
+			}
+
+			.text-7xl {
+				font-size: 4.5rem !important;
+			}
+
+			.text-5xl {
+				font-size: 3rem !important;
+			}
+		}
+
+		/* Touch device optimizations */
+		@media (hover: none) and (pointer: coarse) {
+			.hover\:scale-105:hover {
+				transform: scale(1.02);
+			}
+
+			.hover\:scale-110:hover {
+				transform: scale(1.05);
+			}
+
+			.hover\:scale-125:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		.nav-tooltip {
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			position: absolute;
+			right: 100%;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-right: 12px;
+			padding: 6px 10px;
+			background-color: rgba(0, 0, 0, 0.9);
+			color: white;
+			font-size: 11px;
+			border-radius: 4px;
+			white-space: nowrap;
+			pointer-events: none;
+			z-index: 1000;
+			font-weight: 500;
+		}
+
+		/* Hide all tooltips by default */
+		.nav-tooltip {
+			visibility: hidden !important;
+			opacity: 0 !important;
+		}
+
+		/* Show only the hovered tooltip */
+		.group:hover .nav-tooltip {
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
+
+		.testimonial-card {
+			flex: 0 0 100%;
+			transition: transform 0.5s ease-in-out;
+		}
+
+		.icon-circle {
+			background-color: rgba(255, 255, 255, 0.3);
+			-webkit-backdrop-filter: blur(5px);
+			backdrop-filter: blur(5px);
+			transition: background-color 0.3s ease-in-out;
+			transform: translateZ(0);
+		}
+
+		.dark .icon-circle {
+			background-color: rgba(0, 0, 0, 0.3);
+		}
+
+		.icon-circle svg {
+			transition: color 0.3s ease-in-out;
+		}
+
+		.light .icon-circle svg {
+			color: #374151;
+		}
+
+		.dark .icon-circle svg {
+			color: #f3f4f6;
+		}
+
+		.typing-cursor::after {
+			content: '|';
+			display: inline-block;
+			animation: blink-caret 0.75s step-end infinite;
+		}
+
+		@keyframes blink-caret {
+
+			from,
+			to {
+				color: transparent;
+			}
+
+			50% {
+				color: inherit;
+			}
+		}
+
+		.light .testimonial-text,
+		.light .testimonial-name {
+			color: #1f2937;
+		}
+
+		.dark .testimonial-text,
+		.dark .testimonial-name {
+			color: #ffffff;
+		}
+
+		.dark .project-subtitle {
+			color: #f8fafc;
+		}
+
+		.light .project-subtitle {
+			color: #374151;
+		}
+
+		/* Enhanced text readability */
+		.light .about-text {
+			color: #1f2937;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		.dark .about-text {
+			color: #f9fafb;
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		.light .about-bg {
+			background: rgba(255, 255, 255, 0.9);
+			backdrop-filter: blur(10px);
+		}
+
+		.dark .about-bg {
+			background: rgba(0, 0, 0, 0.7);
+			backdrop-filter: blur(10px);
+		}
+
+		/* Enhanced readability for all text elements */
+		.light p,
+		.light .text-lg {
+			color: #1f2937;
+			font-weight: 500;
+		}
+
+		.dark p,
+		.dark .text-lg {
+			color: #f9fafb;
+			font-weight: 500;
+		}
+
+		/* Better contrast for form elements */
+		.light input,
+		.light textarea {
+			color: #1f2937 !important;
+			background: rgba(255, 255, 255, 0.95) !important;
+		}
+
+		.dark input,
+		.dark textarea {
+			color: #f9fafb !important;
+			background: rgba(0, 0, 0, 0.6) !important;
+		}
+
+		/* Improved testimonial readability */
+		.light .testimonial-text {
+			color: #1f2937 !important;
+			font-weight: 500;
+		}
+
+		.dark .testimonial-text {
+			color: #f9fafb !important;
+			font-weight: 500;
+		}
+
+		/* Beautiful contact form styling with background-inspired colors */
+		.contact-form {
+			background: linear-gradient(135deg,
+					rgba(255, 252, 220, 0.15) 0%,
+					rgba(217, 167, 199, 0.25) 50%,
+					rgba(255, 252, 220, 0.15) 100%);
+			border: 1px solid rgba(217, 167, 199, 0.3);
+		}
+
+		.dark .contact-form {
+			background: linear-gradient(135deg,
+					rgba(75, 19, 79, 0.2) 0%,
+					rgba(201, 75, 75, 0.3) 50%,
+					rgba(75, 19, 79, 0.2) 100%);
+			border: 1px solid rgba(201, 75, 75, 0.4);
+		}
+
+		.contact-input {
+			background: rgba(255, 255, 255, 0.1) !important;
+			border: 1px solid rgba(217, 167, 199, 0.3) !important;
+			-webkit-backdrop-filter: blur(5px);
+			backdrop-filter: blur(5px);
+			transition: all 0.3s ease;
+			transform: translateZ(0);
+		}
+
+		.dark .contact-input {
+			background: rgba(0, 0, 0, 0.2) !important;
+			border: 1px solid rgba(201, 75, 75, 0.4) !important;
+		}
+
+		.contact-input:focus {
+			background: rgba(255, 255, 255, 0.2) !important;
+			border-color: rgba(217, 167, 199, 0.6) !important;
+			box-shadow: 0 0 20px rgba(217, 167, 199, 0.3);
+		}
+
+		.dark .contact-input:focus {
+			background: rgba(0, 0, 0, 0.3) !important;
+			border-color: rgba(201, 75, 75, 0.7) !important;
+			box-shadow: 0 0 20px rgba(201, 75, 75, 0.4);
+		}
+
+		/* Glass-morphism styling for About section */
+		.glass-section {
+			background: linear-gradient(135deg,
+					rgba(255, 252, 220, 0.15) 0%,
+					rgba(217, 167, 199, 0.25) 50%,
+					rgba(255, 252, 220, 0.15) 100%);
+			border: 1px solid rgba(217, 167, 199, 0.3);
+			-webkit-backdrop-filter: blur(8px);
+			backdrop-filter: blur(8px);
+			transform: translateZ(0);
+			/* Hardware acceleration */
+			will-change: transform;
+		}
+
+		.dark .glass-section {
+			background: linear-gradient(135deg,
+					rgba(75, 19, 79, 0.2) 0%,
+					rgba(201, 75, 75, 0.3) 50%,
+					rgba(75, 19, 79, 0.2) 100%);
+			border: 1px solid rgba(201, 75, 75, 0.4);
+		}
+
+		/* New testimonial card styling */
+		.testimonial-card {
+			background: linear-gradient(135deg,
+					rgba(255, 255, 255, 0.95) 0%,
+					rgba(248, 250, 252, 0.98) 100%) !important;
+			border: 1px solid rgba(203, 213, 225, 0.6);
+			-webkit-backdrop-filter: blur(8px);
+			backdrop-filter: blur(8px);
+			box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+			transform: translateZ(0);
+			will-change: transform;
+		}
+
+		.dark .testimonial-card {
+			background: linear-gradient(135deg,
+					rgba(75, 19, 79, 0.25) 0%,
+					rgba(201, 75, 75, 0.35) 100%) !important;
+			border: 1px solid rgba(201, 75, 75, 0.4);
+		}
+
+		.testimonial-quote-icon {
+			color: rgba(236, 72, 153, 0.7);
+		}
+
+		.dark .testimonial-quote-icon {
+			color: rgba(201, 75, 75, 0.7);
+		}
+
+		.testimonial-name {
+			color: #1f2937 !important;
+		}
+
+		.dark .testimonial-name {
+			color: #f9fafb !important;
+		}
+
+		.testimonial-text {
+			color: #4b5563 !important;
+		}
+
+		.dark .testimonial-text {
+			color: #d1d5db !important;
+		}
+
+		/* Fix for browser autofill background color */
+		input:-webkit-autofill,
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus,
+		input:-webkit-autofill:active,
+		textarea:-webkit-autofill,
+		textarea:-webkit-autofill:hover,
+		textarea:-webkit-autofill:focus,
+		textarea:-webkit-autofill:active {
+			-webkit-text-fill-color: #1f2937 !important;
+			transition: background-color 5000s ease-in-out 0s;
+			background-color: rgba(255, 255, 255, 0.95) !important;
+		}
+
+		.dark input:-webkit-autofill,
+		.dark input:-webkit-autofill:hover,
+		.dark input:-webkit-autofill:focus,
+		.dark input:-webkit-autofill:active,
+		.dark textarea:-webkit-autofill,
+		.dark textarea:-webkit-autofill:hover,
+		.dark textarea:-webkit-autofill:focus,
+		.dark textarea:-webkit-autofill:active {
+			-webkit-text-fill-color: #ffffff !important;
+			background-color: rgba(0, 0, 0, 0.2) !important;
+		}
+
+		/* Modal Animations and State */
+		@keyframes fadeInScale {
+			from {
+				opacity: 0;
+				transform: scale(0.95) translateY(10px);
+			}
+
+			to {
+				opacity: 1;
+				transform: scale(1) translateY(0);
+			}
+		}
+
+		@keyframes fadeOutScale {
+			from {
+				opacity: 1;
+				transform: scale(1) translateY(0);
+			}
+
+			to {
+				opacity: 0;
+				transform: scale(0.95) translateY(10px);
+			}
+		}
+
+		@keyframes fadeInBlur {
+			from {
+				opacity: 0;
+				backdrop-filter: blur(0px);
+			}
+
+			to {
+				opacity: 1;
+				backdrop-filter: blur(12px);
+			}
+		}
+
+		@keyframes fadeOutBlur {
+			from {
+				opacity: 1;
+				backdrop-filter: blur(12px);
+			}
+
+			to {
+				opacity: 0;
+				backdrop-filter: blur(0px);
+			}
+		}
+
+		.modal-backdrop-enter {
+			animation: fadeInBlur 0.4s ease-out forwards;
+		}
+
+		.modal-backdrop-exit {
+			animation: fadeOutBlur 0.3s ease-in forwards;
+		}
+
+		.modal-content-enter {
+			animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+		}
+
+		.modal-content-exit {
+			animation: fadeOutScale 0.3s ease-in forwards;
+		}
+
+		/* Prevent background scrolling when modal is open */
+		body.modal-open {
+			overflow: hidden;
+		}
+
+		/* Form message dynamic classes */
+		.form-success-message {
+			background-color: #d1fae5 !important;
+			color: #065f46 !important;
+			border: 1px solid #a7f3d0 !important;
+		}
+
+		.dark .form-success-message {
+			background-color: rgba(6, 78, 59, 0.9) !important;
+			color: #a7f3d0 !important;
+			border: 1px solid rgba(4, 120, 87, 0.6) !important;
+		}
+
+		.form-success-message p {
+			color: inherit !important;
+		}
+
+		.form-error-message {
+			background-color: #fef3c7 !important;
+			color: #92400e !important;
+			border: 1px solid #fde68a !important;
+		}
+
+		.dark .form-error-message {
+			background-color: rgba(120, 53, 15, 0.9) !important;
+			color: #fde68a !important;
+			border: 1px solid rgba(146, 64, 14, 0.6) !important;
+		}
+
+		.form-error-message p {
+			color: inherit !important;
+		}
+
+/* ============================================
+   MOBILE RESPONSIVE FIXES - Ahmed Elhediny Portfolio
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* -- Hero Section -- */
+  #home h1:first-of-type { font-size: 3rem !important; letter-spacing: 0.1em !important; }
+  #home h1:last-of-type { font-size: 2.5rem !important; letter-spacing: 0.08em !important; margin-top: 0.5rem !important; }
+  #home .font-handwritten { font-size: 1.75rem !important; margin-top: 1.5rem !important; margin-bottom: 1rem !important; }
+  #typing-text { font-size: 1.25rem !important; margin-top: 0.75rem !important; }
+  #home.section { min-height: auto !important; padding-top: 140px !important; padding-bottom: 60px !important; }
+
+  /* -- About Section -- */
+  #about.section { padding-top: 60px !important; padding-bottom: 40px !important; }
+  #about .rounded-full.p-2 { width: 240px !important; height: 240px !important; }
+  .about-text { font-size: 0.9rem !important; line-height: 1.7 !important; }
+  #about .grid-cols-3 { gap: 1rem !important; }
+  #about .grid-cols-3 img { width: 48px !important; height: 48px !important; }
+  #about .flex-col.sm\:flex-row { gap: 0.75rem !important; }
+  #about a[href] { font-size: 0.9rem !important; padding: 0.75rem 1.5rem !important; }
+
+  /* -- Core Values Section -- */
+  #core-values.section { padding-top: 40px !important; padding-bottom: 40px !important; }
+  #core-values .mb-16 { margin-bottom: 1.5rem !important; }
+  #core-values h2 { font-size: 2rem !important; }
+  #core-values p.text-xl { font-size: 1rem !important; text-align: center !important; line-height: 1.4 !important; }
+  #core-values .grid { display: flex !important; flex-direction: column !important; gap: 1rem !important; }
+  #core-values .glass-section { padding: 1.25rem !important; width: 100% !important; }
+  #core-values .glass-section h3 { font-size: 1.1rem !important; margin-bottom: 0.5rem !important; line-height: 1.3 !important; text-align: left !important; }
+  #core-values .glass-section p { font-size: 0.9rem !important; line-height: 1.5 !important; text-align: left !important; word-spacing: normal !important; letter-spacing: normal !important; hyphens: none !important; -webkit-hyphens: none !important; }
+
+  /* -- Projects Section -- */
+  #projects.section { padding-top: 40px !important; padding-bottom: 40px !important; }
+  #projects h2 { font-size: 2rem !important; }
+  #projects .flex.flex-wrap { gap: 0.5rem !important; justify-content: center !important; margin-bottom: 1.5rem !important; }
+  #projects .filter-btn { font-size: 0.75rem !important; padding: 0.5rem 0.875rem !important; }
+
+  /* -- Testimonials Section -- */
+  #testimonials.section { padding-top: 40px !important; padding-bottom: 20px !important; }
+  #testimonials h2 { font-size: 2rem !important; margin-bottom: 1.5rem !important; }
+
+  /* -- Contact Section -- */
+  #contact.section { padding-top: 20px !important; padding-bottom: 60px !important; }
+  #contact h2 { font-size: 2rem !important; }
+  #contact p.text-xl { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
+  #contact-form { padding: 1rem !important; }
+  .contact-input { padding: 0.875rem 1rem !important; font-size: 0.9rem !important; }
+  #submit-btn { width: 100% !important; padding: 1rem !important; font-size: 1rem !important; }
+  .flex.justify-center.gap-6 img { width: 2rem !important; height: 2rem !important; }
+
+  /* -- Section headings general -- */
+  .section-heading { font-size: 1.75rem !important; }
+
+
+
+  /* -- Make slider controls always visible on mobile (no hover) -- */
+  .group\/slider button,
+  .group\/slider div.bottom-0 {
+    opacity: 1 !important;
+  }
+
+  /* -- Mobile Projects Grid (2 columns) -- */
+  #projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  #projects-grid img {
+    height: 130px !important;
+  }
+  #projects-grid .p-6 {
+    padding: 0.5rem !important;
+  }
+  #projects-grid h3 {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.4rem !important;
+    line-height: 1.2 !important;
+  }
+  #projects-grid .group button,
+  #projects-grid button {
+    padding: 0.35rem 0.6rem !important;
+    font-size: 0.72rem !important;
+    border-radius: 0.5rem !important;
+    min-height: unset !important;
+    height: auto !important;
+  }
+}
+
+/* Small phones (iPhone SE, Galaxy A) */
+@media (max-width: 390px) {
+  #home h1:first-of-type { font-size: 2.5rem !important; }
+  #home h1:last-of-type { font-size: 2rem !important; }
+  #home .font-handwritten { font-size: 1.5rem !important; }
+}
+
+
+
+
+
+
