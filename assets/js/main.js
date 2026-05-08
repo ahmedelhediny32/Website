@@ -215,10 +215,10 @@ function filterProjects(category) {
         if ((btn.textContent.trim().toLowerCase().includes(category) && category !== 'all') ||
             (category === 'all' && btn.textContent.trim() === 'All Projects')) {
             btn.classList.remove('bg-white', 'dark:bg-gray-800', 'text-gray-800', 'dark:text-gray-200', 'hover:bg-gray-100', 'dark:hover:bg-gray-700');
-            btn.classList.add('bg-gradient-to-r', 'from-pink-500', 'to-rose-500', 'dark:from-purple-500', 'dark:to-cyan-500', 'text-white', 'shadow-lg');
+            btn.classList.add('bg-gradient-to-r', 'from-pink-500', 'to-rose-500', 'dark:from-pink-500', 'dark:to-rose-500', 'text-white', 'shadow-lg');
         } else {
             btn.classList.add('bg-white', 'dark:bg-gray-800', 'text-gray-800', 'dark:text-gray-200', 'hover:bg-gray-100', 'dark:hover:bg-gray-700');
-            btn.classList.remove('bg-gradient-to-r', 'from-pink-500', 'to-rose-500', 'dark:from-purple-500', 'dark:to-cyan-500', 'text-white', 'shadow-lg');
+            btn.classList.remove('bg-gradient-to-r', 'from-pink-500', 'to-rose-500', 'dark:from-pink-500', 'dark:to-rose-500', 'text-white', 'shadow-lg');
         }
     });
 
@@ -250,7 +250,7 @@ function filterProjects(category) {
                 </div>
                 <div class="p-6 flex flex-col flex-grow">
                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 line-clamp-2">${project.title}</h3>
-                    <button onclick="openProjectModal('${project.id}')" class="mt-auto w-full bg-gradient-to-r from-pink-500 to-rose-500 dark:from-purple-500 dark:to-cyan-500 text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                    <button onclick="openProjectModal('${project.id}')" class="mt-auto w-full bg-gradient-to-r from-pink-500 to-rose-500 dark:from-pink-500 dark:to-rose-500 text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
                         View Project
                     </button>
                 </div>
@@ -456,7 +456,7 @@ function openProjectModal(projectId) {
             } else {
                 groups[groupName].forEach(imgSrc => {
                     const imgDiv = document.createElement('div');
-                    imgDiv.className = 'group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:shadow-pink-500/30 dark:hover:shadow-cyan-500/30 transition-all duration-500 transform hover:-translate-y-2 ring-1 ring-black/5 dark:ring-white/10';
+                    imgDiv.className = 'group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:shadow-pink-500/30 dark:hover:shadow-pink-500/30 transition-all duration-500 transform hover:-translate-y-2 ring-1 ring-black/5 dark:ring-white/10';
 
                     const img = document.createElement('img');
                     img.src = imgSrc;
@@ -807,7 +807,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function showInstallButton() {
         const installBtn = document.createElement('button');
         installBtn.innerHTML = '📱 Install App';
-        installBtn.className = 'fixed bottom-4 right-4 bg-pink-500 hover:bg-pink-600 dark:bg-cyan-500 dark:hover:bg-cyan-600 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50';
+        installBtn.className = 'fixed bottom-4 right-4 bg-pink-500 hover:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-600 text-white px-4 py-2 rounded-full shadow-lg transition-all duration-300 z-50';
         installBtn.addEventListener('click', () => {
             if (deferredPrompt) {
                 deferredPrompt.prompt();
@@ -877,6 +877,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (typeof trackEvent === 'function') {
             trackEvent('download', 'Resume', 'Ahmed_Elhediny_CV.pdf');
         }
+    }
+
+    // Dynamic binding for Resume Download button
+    const resumeBtn = document.querySelector('a[download]');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', trackDownload);
     }
 
     // Contact Form Handler (Formspree)

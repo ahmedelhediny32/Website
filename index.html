@@ -139,7 +139,7 @@
 					<div id="nav-menu"
 						class="absolute right-0 mt-2 w-16 bg-white/50 dark:bg-black/50 backdrop-blur-lg rounded-full shadow-lg p-2 flex flex-col items-center gap-4 origin-top-right scale-0 transition-transform duration-300 opacity-0">
 						<a href="#home"
-							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-cyan-400 transition-colors">
+							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-500 transition-colors">
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 									d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -147,7 +147,7 @@
 							<span class="nav-tooltip">Home</span>
 						</a>
 						<a href="#about"
-							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-cyan-400 transition-colors">
+							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-500 transition-colors">
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 									d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -155,7 +155,7 @@
 							<span class="nav-tooltip">About</span>
 						</a>
 						<a href="#projects"
-							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-cyan-400 transition-colors">
+							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-500 transition-colors">
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 									d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
@@ -163,7 +163,7 @@
 							<span class="nav-tooltip">Projects</span>
 						</a>
 						<a href="#testimonials"
-							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-cyan-400 transition-colors">
+							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-500 transition-colors">
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 									d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -171,7 +171,7 @@
 							<span class="nav-tooltip">Testimonials</span>
 						</a>
 						<a href="#contact"
-							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-cyan-400 transition-colors">
+							class="group/item relative text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-500 transition-colors">
 							<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 									d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -201,21 +201,30 @@
 		<section id="about" class="section">
 			<div class="container mx-auto px-4">
 				<div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-					<div class="lg:col-span-2 flex justify-center">
-						<div
-							class="group w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full p-2 sm:p-3 bg-gradient-to-br from-pink-400 to-cyan-400 dark:from-pink-600 dark:to-cyan-600 shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:hover:shadow-cyan-500/30">
-							<picture>
-								<source srcset="assets/img/icons/ahmed elhediny.webp" type="image/webp">
-								<img loading="lazy" src="assets/img/icons/ahmed elhediny.jpg"
-									alt="Ahmed Elhediny - Creative Graphic Designer" width="384" height="384"
-									class="w-full h-full rounded-full object-cover border-4 border-white/50 dark:border-black/50 transition-transform duration-300 group-hover:scale-110">
-							</picture>
+					<div class="lg:col-span-2 flex justify-center relative group">
+						<!-- Glowing Back-Glow Blob -->
+						<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-88 lg:h-88 rounded-full bg-gradient-to-tr from-pink-500/25 to-rose-500/25 blur-3xl transition-all duration-700 group-hover:scale-110 group-hover:opacity-60 pointer-events-none -z-10"></div>
+						
+						<!-- Floating Image Frame -->
+						<div class="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+							<!-- Subtle Glowing Aura Layer -->
+							<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-pink-500 to-rose-500 opacity-20 blur-md transition-opacity duration-500 group-hover:opacity-40"></div>
+							
+							<!-- Main Rounded Wrapper with an ultra-fine border -->
+							<div class="relative w-full h-full rounded-full overflow-hidden border-2 border-white/20 dark:border-white/10 bg-white/10 dark:bg-black/30 shadow-2xl transition-all duration-500 group-hover:scale-105 ring-4 ring-pink-500/10 dark:ring-pink-500/5 group-hover:ring-pink-500/30 dark:group-hover:ring-pink-500/25">
+								<picture>
+									<source srcset="assets/img/icons/ahmed elhediny.webp" type="image/webp">
+									<img loading="lazy" src="assets/img/icons/ahmed elhediny.jpg"
+										alt="Ahmed ElHediny"
+										class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110 filter drop-shadow-lg">
+								</picture>
+							</div>
 						</div>
 					</div>
 					<div class="lg:col-span-3 text-center lg:text-left">
 						<h2 class="text-4xl md:text-5xl font-extrabold mb-6 section-heading">About Me</h2>
 						<div
-							class="group glass-section p-5 sm:p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-cyan-500/20 dark:hover:shadow-cyan-500/40">
+							class="group glass-section p-5 sm:p-8 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl dark:shadow-pink-500/20 dark:hover:shadow-pink-500/40">
 							<p class="text-base sm:text-xl leading-relaxed text-justify about-text font-medium">
 								I’m a Graphic Designer with over three years of experience, certified by multiple
 								professional institutions, and continuously developing my skills through ongoing
@@ -270,17 +279,16 @@
 								</div>
 							</div>
 							<div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start">
-								<a href="docs/Ahmed%20ElHediny%20CV.pdf" download="Ahmed_Elhediny_CV.pdf"
-									class="inline-block bg-pink-500 hover:bg-pink-600 dark:bg-cyan-500 dark:hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
-									onclick="trackDownload()">
+								<a href="docs/Ahmed_Elhediny_CV.pdf" target="_blank" download="Ahmed_Elhediny_CV.pdf"
+									class="inline-block bg-pink-500 hover:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
 									Download Resume
 								</a>
 								<a href="#projects"
-									class="inline-block bg-pink-500 hover:bg-pink-600 dark:bg-cyan-500 dark:hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
+									class="inline-block bg-pink-500 hover:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
 									View My Work
 								</a>
 								<a href="#contact"
-									class="inline-block bg-pink-500 hover:bg-pink-600 dark:bg-cyan-500 dark:hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
+									class="inline-block bg-pink-500 hover:bg-pink-600 dark:bg-pink-500 dark:hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg text-center">
 									Contact Me
 								</a>
 							</div>
@@ -420,7 +428,7 @@
 					</div>
 					<div class="flex justify-center gap-4 mt-8 lg:block">
 						<button id="prev-btn" aria-label="Previous testimonial"
-							class="lg:absolute lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:-translate-x-12 p-3 rounded-full shadow-lg bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 dark:from-purple-500 dark:to-cyan-500 dark:hover:from-purple-600 dark:hover:to-cyan-600 text-white transition-all duration-300 hover:scale-110 z-10 relative">
+							class="lg:absolute lg:top-1/2 lg:left-0 lg:-translate-y-1/2 lg:-translate-x-12 p-3 rounded-full shadow-lg bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 dark:from-pink-500 dark:to-rose-500 dark:hover:from-pink-600 dark:hover:to-rose-600 text-white transition-all duration-300 hover:scale-110 z-10 relative">
 
 							<svg class="w-5 h-5" aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
 								viewBox="0 0 24 24">
@@ -430,7 +438,7 @@
 							</svg>
 						</button>
 						<button id="next-btn" aria-label="Next testimonial"
-							class="lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2 lg:translate-x-12 p-3 rounded-full shadow-lg bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 dark:from-purple-500 dark:to-cyan-500 dark:hover:from-purple-600 dark:hover:to-cyan-600 text-white transition-all duration-300 hover:scale-110 z-10 relative">
+							class="lg:absolute lg:top-1/2 lg:right-0 lg:-translate-y-1/2 lg:translate-x-12 p-3 rounded-full shadow-lg bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 dark:from-pink-500 dark:to-rose-500 dark:hover:from-pink-600 dark:hover:to-rose-600 text-white transition-all duration-300 hover:scale-110 z-10 relative">
 
 							<svg class="w-5 h-5" aria-hidden="true" focusable="false" fill="none" stroke="currentColor"
 								viewBox="0 0 24 24">
@@ -470,7 +478,7 @@
 					</div>
 					<div class="text-center">
 						<button type="submit" id="submit-btn"
-							class="relative overflow-hidden bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 dark:from-purple-500 dark:to-cyan-500 dark:hover:from-purple-600 dark:hover:to-cyan-600 text-white font-bold py-4 px-8 sm:py-5 sm:px-16 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed text-base sm:text-lg w-full sm:w-auto">
+							class="relative overflow-hidden bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 dark:from-pink-500 dark:to-rose-500 dark:hover:from-pink-600 dark:hover:to-rose-600 text-white font-bold py-4 px-8 sm:py-5 sm:px-16 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed text-base sm:text-lg w-full sm:w-auto">
 							<div
 								class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700">
 							</div>
@@ -484,17 +492,17 @@
 					<div class="flex justify-center gap-6 flex-wrap">
 						<a href="https://www.behance.net/ahmedel-hediny" target="_blank" rel="noopener noreferrer"
 							aria-label="Behance"
-							class="text-gray-800 dark:text-gray-200 hover:text-pink-500 dark:hover:text-cyan-400 transition-transform duration-300 hover:scale-125">
+							class="text-gray-800 dark:text-gray-200 hover:text-pink-500 dark:hover:text-pink-500 transition-transform duration-300 hover:scale-125">
 							<img src="assets/img/icons/behance.png" alt="Behance" class="w-8 h-8 object-contain">
 						</a>
 						<a href="https://www.instagram.com/ahmed__elhediny?igsh=MTV1N2RzajRhY2E2NQ==" target="_blank"
 							rel="noopener noreferrer" aria-label="Instagram"
-							class="text-gray-800 dark:text-gray-200 hover:text-pink-500 dark:hover:text-cyan-400 transition-transform duration-300 hover:scale-125">
+							class="text-gray-800 dark:text-gray-200 hover:text-pink-500 dark:hover:text-pink-500 transition-transform duration-300 hover:scale-125">
 							<img src="assets/img/icons/instagram.png" alt="Instagram" class="w-8 h-8 object-contain">
 						</a>
 						<a href="https://www.linkedin.com/in/ahmedelhediny?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
 							target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-							class="text-gray-800 dark:text-gray-200 hover:text-pink-500 dark:hover:text-cyan-400 transition-transform duration-300 hover:scale-125">
+							class="text-gray-800 dark:text-gray-200 hover:text-pink-500 dark:hover:text-pink-500 transition-transform duration-300 hover:scale-125">
 							<img src="assets/img/icons/linkedin.png" alt="LinkedIn" class="w-8 h-8 object-contain">
 						</a>
 					</div>
@@ -538,7 +546,7 @@
 					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 					<div class="absolute bottom-0 left-0 p-4 sm:p-6 md:p-10">
 						<span id="modal-category"
-							class="inline-block px-3 py-1 mb-2 sm:mb-4 text-xs sm:text-sm font-semibold tracking-wider text-white uppercase rounded-full bg-pink-500/80 dark:bg-purple-500/80 backdrop-blur-sm">Category</span>
+							class="inline-block px-3 py-1 mb-2 sm:mb-4 text-xs sm:text-sm font-semibold tracking-wider text-white uppercase rounded-full bg-pink-500/80 dark:bg-pink-500/80 backdrop-blur-sm">Category</span>
 						<h2 id="modal-title" class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white">Project
 							Title</h2>
 					</div>

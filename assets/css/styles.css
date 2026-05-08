@@ -34,11 +34,19 @@
 		}
 
 		.section {
-			min-height: 100vh;
-			padding: 100px 1rem;
+			min-height: auto;
+			padding: 80px 1rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+		}
+
+		/* Apply full viewport height only on landscape desktops/laptops to avoid portrait simulated gaps */
+		@media (min-width: 769px) and (min-aspect-ratio: 1/1) {
+			.section {
+				min-height: 100vh;
+				padding: 100px 1rem;
+			}
 		}
 
 		/* Mobile optimizations */
