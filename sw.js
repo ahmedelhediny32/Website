@@ -1,7 +1,7 @@
 // Service Worker for Ahmed Elhediny Portfolio
-const CACHE_NAME = 'ahmed-portfolio-v1.0.2';
-const STATIC_CACHE = 'static-v1.0.2';
-const DYNAMIC_CACHE = 'dynamic-v1.0.2';
+const CACHE_NAME = 'ahmed-portfolio-v1.0.3';
+const STATIC_CACHE = 'static-v1.0.3';
+const DYNAMIC_CACHE = 'dynamic-v1.0.3';
 
 // Files to cache immediately
 const STATIC_FILES = [
