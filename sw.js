@@ -1,7 +1,7 @@
 // Service Worker for Ahmed Elhediny Portfolio
-const CACHE_NAME = 'ahmed-portfolio-v1.0.3';
-const STATIC_CACHE = 'static-v1.0.3';
-const DYNAMIC_CACHE = 'dynamic-v1.0.3';
+const CACHE_NAME = 'ahmed-portfolio-v1.0.4';
+const STATIC_CACHE = 'static-v1.0.4';
+const DYNAMIC_CACHE = 'dynamic-v1.0.4';
 
 // Files to cache immediately
 const STATIC_FILES = [
@@ -71,6 +71,12 @@ self.addEventListener('fetch', event => {
 
   // Skip external requests (except fonts and CDN)
   const url = new URL(event.request.url);
+  
+  // Skip PDFs and docs folder to let browser native downloaders/viewers handle them directly from network
+  if (url.pathname.endsWith('.pdf') || url.pathname.includes('/docs/')) {
+    return;
+  }
+
   if (url.origin !== location.origin &&
     !url.hostname.includes('googleapis.com') &&
     !url.hostname.includes('tailwindcss.com')) {
